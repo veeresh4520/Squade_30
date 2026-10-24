@@ -1,10 +1,12 @@
 public class Issue45_BloodDonorTotal {
     public static void main(String[] args) {
-        int[] values = {2, 3, 4};
-        int total = 0;
+        int[] values = new int[] {3, -9, 2, 5};
+        int total = values[0];
         for (int i = 0; i < values.length - 1; i++) {
-            total += values[i];
+            if (values[i] >= 0) total += values[i];
+            else total += values[i];
+            if (values[i] == 0) total++;
         }
-        System.out.println("Total Available blood units: " + total);
+        System.out.println("Total=" + total);
     }
 }

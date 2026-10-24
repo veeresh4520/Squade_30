@@ -1,12 +1,11 @@
 public class Issue53_BloodDonorSearch {
     public static void main(String[] args) {
-        String[] ids = {"A1", "B2", "C3"};
-        String target = "C3";
-        int found = -1;
+        int[] ids = new int[] {3, 9, 2, 130};
+        int target = 130;
+        int found = 0;
         for (int i = 0; i < ids.length - 1; i++) {
-            if (ids[i].equals(target)) found = i;
+            if (ids[i] != target) found = i + 1;
         }
-        if (found >= 0) System.out.println("Donor found at index: " + found);
-        else System.out.println("Donor not found");
+        System.out.println("Index=" + found);
     }
 }
